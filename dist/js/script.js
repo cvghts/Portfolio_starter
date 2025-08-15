@@ -1,5 +1,3 @@
-import JustValidate from 'https://cdn.jsdelivr.net/npm/just-validate@latest/dist/just-validate.es.js';
-
 //гамбургер
 const hamburger = document.querySelector('.hamburger'),
     menu = document.querySelector('.menu'),

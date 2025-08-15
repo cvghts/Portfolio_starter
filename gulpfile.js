@@ -11,6 +11,8 @@ gulp.task("server", function () {
 		server: {
 			baseDir: "dist",
 		},
+		notify: false,
+        ui: false
 	});
 
 	gulp.watch("src/*.html").on("change", browserSync.reload);
