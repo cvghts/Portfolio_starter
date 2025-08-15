@@ -1,3 +1,5 @@
+import JustValidate from 'https://cdn.jsdelivr.net/npm/just-validate@latest/dist/just-validate.es.js';
+
 //гамбургер
 const hamburger = document.querySelector('.hamburger'),
     menu = document.querySelector('.menu'),
@@ -50,5 +52,60 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', checkSidepanelColor);
     checkSidepanelColor(); // Виконуємо перевірку одразу після завантаження сторінки
 });
+
+try {
+    const validatorTouch = new JustValidate('.contacts__form');
+
+    validatorTouch
+        .addField('#name', [
+            {
+            rule: 'required',
+            errorMessage: 'Please fill the name',
+            },
+            {
+            rule: 'minLength',
+            value: 2,
+            errorMessage: 'Min 2 char!',
+            },
+        ])
+        .addField('#email', [
+            {
+            rule: 'required',
+            errorMessage: 'Please fill the email',
+            },
+            {
+            rule: 'email',
+            },
+        ])
+        .addField('#text', [
+            {
+            rule: 'required',
+            errorMessage: 'Please fill the text',
+            },
+            {
+            rule: 'minLength',
+            value: 5,
+            },
+        ])
+        .addField('#checkbox', [
+            {
+            rule: 'required',
+            },
+        ])
+        .onSuccess((event) => {
+			const form = event.currentTarget;
+			const formData = new FormData(form);
+
+			fetch("https://httpbin.org/post", {
+				method: "POST",
+				body: formData,
+			})
+				.then((res) => res.json())
+				.then((data) => {
+					console.log("Success", data);
+					form.reset();
+				});
+		});
+} catch (e) {}
 
 

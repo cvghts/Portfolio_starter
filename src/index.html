@@ -59,12 +59,12 @@
             </div>
             <nav>
                 <ul class="menu__list">
-                    <li class="menu__link"><a href="#">Про мене</a></li>
-                    <li class="menu__link"><a href="#">Мій досвід</a></li>
-                    <li class="menu__link"><a href="#">Мої навички</a></li>
-                    <li class="menu__link"><a href="#">Мої роботи</a></li>
-                    <li class="menu__link"><a href="#">Прайс-лист</a></li>
-                    <li class="menu__link"><a href="#">Контакти</a></li>
+                    <li class="menu__link"><a href="#about">Про мене</a></li>
+                    <li class="menu__link"><a href="#resume">Мій досвід</a></li>
+                    <li class="menu__link"><a href="#skills">Мої навички</a></li>
+                    <li class="menu__link"><a href="#portfolio">Мої роботи</a></li>
+                    <li class="menu__link"><a href="#price">Прайс-лист</a></li>
+                    <li class="menu__link"><a href="#contacts">Контакти</a></li>
                 </ul>
             </nav>
             <div class="menu__social">
@@ -100,12 +100,12 @@
             <div class="title title_fz16 promo__subtitle">Мене звати Євгенія Ярош</div>
             <h1 class="title title_fz48 promo__title">Я web-розробник <br> із селища Смоліне</h1>
             <div class="promo__btns">
-                <a href="#" class="promo__link btn">Портфоліо</a>
-                <a href="#" class="promo__link">Про мене</a>
+                <a href="#portfolio" class="promo__link btn">Портфоліо</a>
+                <a href="#about" class="promo__link">Про мене</a>
             </div>
         </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <div class="about__wrapper">
                 <div class="about__photo">
@@ -149,9 +149,9 @@
             </div>
         </div>
     </section>
-    <section class="resume">
+    <section class="resume" id="resume">
         <div class="container">
-            <h2 class="title title_fz16 title__section-title">Досід</h2>
+            <h2 class="title title_fz16 title__section-title">Досвід</h2>
             <div class="title title_fz36 title__section-subtitle">Чим я буду корисна</div>
             <div class="divider"></div>
 
@@ -225,7 +225,7 @@
             </div>
         </div>
     </section>
-    <section class="skills">
+    <section class="skills" id="skills">
         <div class="container">
             <h2 class="title title_fz16 title__section-title">Навички</h2>
             <div class="title title_fz36 title__section-subtitle">Що я використовую в роботі</div>
@@ -327,7 +327,7 @@
             </div>
         </div>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="container">
             <h2 class="title title_fz16 title__section-title">Портфоліо</h2>
             <div class="title title_fz36 title__section-subtitle">Мої роботи</div>
@@ -355,7 +355,7 @@
             </div>
         </div>
     </section>
-    <section class="price">
+    <section class="price" id="price">
         <div class="container">
             <h2 class="title title_fz16 title__section-title">Прайс-лист</h2>
             <div class="divider"></div>
@@ -393,7 +393,7 @@
             </div>
         </div>
     </section>
-    <section class="contacts">
+    <section class="contacts" id="contacts">
         <div class="container">
             <div class="contacts__wrapper">
                 <div class="contacts__photo">
@@ -434,7 +434,7 @@
                         <div class="contacts__triggers">
                             <button class="btn contacts__btn">Відправити повідомлення</button>
                             <div class="contacts__policy">
-                                <input required type="checkbox">
+                                <input required type="checkbox" name="checkbox" id="checkbox" >
                                 <span>Я погоджуюсь з <a href="https://www.freeprivacypolicy.com/live/7c8c843e-b4eb-4908-a880-de4ed0f32903">політикою конфіденційності</a></span>
                             </div>
                         </div>
@@ -444,6 +444,6 @@
         </div>
     </section>
 
-    <script src="js/script.js"></script>
+    <script type="module" src="js/script.js"></script>
 </body>
 </html>
